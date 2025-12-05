@@ -19,30 +19,21 @@ MeowMood-App/
 2. (แนะนำ) สร้าง Virtual Environment  
 
 Windows:
-bash
 python -m venv venv
 venv\Scripts\activate
-macOS / Linux:
 
-bash
-Copy code
+macOS / Linux:
 python -m venv venv
 source venv/bin/activate
-ติดตั้ง dependencies
 
-bash
-Copy code
+ติดตั้ง dependencies
 pip install -r requirements.txt
 
 ## 4. Run Application
 แบบสั้น:
-bash
-Copy code
 streamlit run app.py
 
 แบบยาว (หากระบบหา streamlit ไม่เจอ):
-bash
-Copy code
 python -m streamlit run app.py
 เมื่อรันสำเร็จ ระบบจะเปิดเว็บผ่านเบราว์เซอร์ที่ URL เช่น
 http://localhost:8501
