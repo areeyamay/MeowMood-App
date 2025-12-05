@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
+* {
+    font-family: 'Fredoka', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #FFF7EC;
+}
+
+.main,
+[data-testid="stAppViewContainer"] {
+    background: #FFF7EC;
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+.block-container {
+    max-width: 1200px;
+    padding-top: 1.8rem;
+    padding-bottom: 3rem;
+}
+
+/* ---------- BUTTON ---------- */
+
+.stButton>button {
+    border-radius: 999px;
+    padding: 0.7rem 1.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #7FB77E;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: none;
+    transition: background 0.15s ease-in-out;
+}
+
+.stButton>button:hover {
+    background: #6BA76A;
+}
+
+.stButton>button:active {
+    background: #5F9960;
+}
+
+/* ---------- HERO ---------- */
+
+.hero-card {
+    background: #FFFFFF;
+    border-radius: 32px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 999px;
+    background: #E4F8D2;
+    font-size: 0.85rem;
+    color: #3C7A1E;
+    margin-bottom: 0.4rem;
+}
+
+.paw-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.hero-sub {
+    color: #6B6B7A;
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+}
+
+/* mood tags */
+.hero-moods {
+    margin-top: 0.6rem;
+}
+
+.emo-tag {
+    display: inline-flex;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.25rem;
+    color: white;
+    font-weight: 500;
+}
+
+.emo-angry   { background: #FF6A6A; }
+.emo-neutral { background: #FFB347; }
+.emo-relaxed { background: #5FD5A8; }
+.emo-scared  { background: #7B8FFF; }
+
+/* hero cats image bottom-right */
+.hero-cats-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+.hero-cats {
+    height: 175px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+/* ---------- HERO RESPONSIVE ---------- */
+
+@media (max-width: 1200px) {
+    .hero-card {
+        padding: 1.6rem 1.8rem 1.6rem 1.8rem;
+    }
+
+    .hero-cats-wrapper {
+        position: static;     
+        height: auto;
+        margin-top: 0.3rem;   
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .hero-cats {
+        height: auto;
+        width: 90%;           
+        max-width: 720px;    
+        max-height: none;
+        margin-right: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-card {
+        padding: 1.4rem 1.5rem 1.6rem 1.5rem;
+    }
+
+    .hero-cats {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ---------- UPLOADER ---------- */
+
+.upload-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.2rem; 
+    color: #C48B5A;
+    font-size: 0.9rem;
+}
+
+
+/* icon แมวใต้ uploader */
+.upload-icon {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+[data-testid="stFileUploader"] {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 1.4rem 1.6rem;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+    border: 1px solid #FFE4C4;
+}
+
+[data-testid="stFileUploader"] section {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+[data-testid="stFileDropzone"] {
+    border: none !important;
+    background: transparent !important;
+}
+
+[data-testid="stFileUploader"] label {
+    font-size: 0.9rem;
+    color: #C48B5A;
+}
+
+/* ---------- IMAGE CARD ---------- */
+
+.image-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 1rem;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+    border: 1px solid #FFE4C4;
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.image-fit {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+/* ---------- RESULT BOX ---------- */
+
+.emotion-box,
+.prob-box {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 1.4rem 1.6rem;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+}
+
+.emotion-box {
+    border: 1px solid #FFD3E2;
+}
+
+.prob-box {
+    border: 1px solid #F2E5FF;
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.emotion-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.prob-box .emotion-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.prob-section {
+    margin-top: 0.2rem;
+}
+
+.prob-item {
+    margin-bottom: 1.6rem;
+}
+
+.prob-label {
+    margin: 0.1rem 0 0.2rem;
+    font-size: 0.95rem;
+}
+
+/* ---------- EMOTION LABEL ---------- */
+
+.emotion-label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.emotion-label-angry   { color: #FF6A6A; }
+.emotion-label-neutral { color: #FFB347; }
+.emotion-label-relaxed { color: #5FD5A8; }
+.emotion-label-scared  { color: #7B8FFF; }
+
+/* ---------- EMO BARS ---------- */
+
+.emo-bar-wrapper {
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: #F2E5FF;
+    margin: 0.1rem 0 0.1rem 0;
+    overflow: hidden;
+}
+
+.emo-bar {
+    height: 100%;
+    border-radius: inherit;
+}
+
+.emo-bar-angry   { background-color: #FF6A6A; }
+.emo-bar-neutral { background-color: #FFB347; }
+.emo-bar-relaxed { background-color: #5FD5A8; }
+.emo-bar-scared  { background-color: #7B8FFF; }
